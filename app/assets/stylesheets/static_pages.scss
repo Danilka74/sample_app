@@ -1,3 +1,51 @@
-// Place all the styles related to the StaticPages controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.header {
+  background-color: #302e2e;
+  height: 50px;
+  color: white;
+  &__wrapper {
+    display: flex;
+    height: inherit;
+    justify-content: space-between;
+  }
+}
+.logo {
+  display: flex;
+  align-items: center;
+}
+ul.navigation-list {
+  display: flex;
+  margin: 0;
+  & a{
+    color: #a5a4a4; 
+  }
+  & li {
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+}
+#btn-center {
+  margin: 0 auto;
+  display: block;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #000;
+}
+.footer-links {
+  display: flex;
+  margin: 0;
+  & li{
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+  }
+  & a{ 
+    color: #a5a4a4;
+  }
+}

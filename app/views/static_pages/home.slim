@@ -1,7 +1,14 @@
 - provide(:title, 'Home') 
-h1 Sample App
-p 
-  | This is the home page for the 
-  <a href="http://railstutorial.org/"> Ruby on Rails Tutorial </a>
-  | sample application.
-      
+
+= render 'header'
+
+.container
+  .jumbotron
+    h1.text-center Welcome to the Sample App 
+    p.lead.text-center 
+      | This is home page for the 
+      = link_to "Ruby on Rails Tutorial ", '#' 
+      | sample application.
+    button.btn.btn-primary.btn-lg#btn-center type="button" Sign up now!
+
+= render 'footer'
