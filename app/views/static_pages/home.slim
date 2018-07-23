@@ -3,12 +3,12 @@
 = render 'header'
 
 .container
-  .jumbotron
+  .jumbotron.text-center
     h1.text-center Welcome to the Sample App 
     p.lead.text-center 
       | This is home page for the 
       = link_to "Ruby on Rails Tutorial ", '#' 
       | sample application.
-    button.btn.btn-primary.btn-lg#btn-center type="button" Sign up now!
+    = link_to "Sign up now!", signup_path, class: "btn btn-primary btn-lg", id: "btn-center" 
 
 = render 'footer'
