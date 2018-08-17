@@ -46,6 +46,7 @@ group :development, :test do
   # I add rspec ---------------
   gem 'rspec-rails', '~> 3.7'
   gem 'sqlite3'
+  gem 'factory_bot_rails'
 end
 
 

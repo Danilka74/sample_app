@@ -1,0 +1,12 @@
+-provide(:title, @user.name)
+= render 'static_pages/header'
+.container
+  .text-center
+    | Добро пожаловать в Samle App
+  .row
+    aside.col-4
+      section
+        h1 
+          = gravatar_for @user 
+          = @user.name
+= render 'static_pages/footer'    

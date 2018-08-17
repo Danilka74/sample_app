@@ -4,8 +4,8 @@ header.header
       h3 SAMPLE APP
     ul.navigation-list
       li
-        = link_to "Home", 'home'
+        = link_to "Home", controller: "static_pages", action: "home"
       li
-        = link_to "Help", 'help'
+        = link_to "Help", controller: "static_pages", action: "help"
       li
         = link_to "Sign In", '#'
