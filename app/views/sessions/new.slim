@@ -1,0 +1,21 @@
+-provide(:title, "Sign In")
+=render "static_pages/header"
+h1.text-center Войти
+
+.container
+  = form_with scope: :session, url: sessions_path, local: true do |f|
+    .form-group
+      =f.label :email, "Почта"
+      =f.text_field :email, class: 'form-control'
+    .form-group
+      =f.label :password, "Пароль"
+      =f.password_field :password, class: 'form-control'
+    .form-group
+      =f.submit "Войти", class: 'btn btn-primary'
+
+    p 
+      | Новый пользователь? 
+      = link_to "Зарегестрироваться!", signup_path
+      
+
+=render "static_pages/footer"    

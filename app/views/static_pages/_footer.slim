@@ -4,8 +4,8 @@
   .right
     ul.footer-links
       li
-        = link_to "About", 'about'
+        = link_to "About",   controller: "static_pages", action: "about"
       li
-        = link_to "Contact", 'contact'
+        = link_to "Contact", controller: "static_pages", action: "contact"
       li
         = link_to "News", '#'

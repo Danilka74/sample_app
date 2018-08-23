@@ -91,5 +91,6 @@ Rails.application.configure do
 
   # Force all access to the app over SSL, use Strict-Transport-Security,
   # and use secure cookies.
+  # Add "S" to http => https
   config.force_ssl = true
 end
