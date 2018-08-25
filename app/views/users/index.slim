@@ -1,1 +1,17 @@
-h1 здесь все юзеры
+-provide(:title, 'Users')
+= render 'static_pages/header'
+h1.text-center Здесь все юзеры
+= will_paginate @users
+
+ul.list-group
+  - @users.each do |user|
+    li.list-group-item 
+      = gravatar_for user
+      = link_to user.name, user
+      - if current_user.admin? && !current_user?(user)
+        = link_to "delete", user, method: :delete,
+                                  data: { confirm: "Уверен?" } 
+
+= will_paginate @users
+
+= render 'static_pages/footer'   
