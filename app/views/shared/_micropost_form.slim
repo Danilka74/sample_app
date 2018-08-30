@@ -1,0 +1,7 @@
+.form
+  = form_with model: @micropost, local: true do |f|
+    = render 'shared/error_messages', object: f.object
+    .form-group
+      = f.text_area :content, placeholder: "Your micropost is here..."
+    .form-group  
+      = f.submit "Post", class: "btn btn-primary"

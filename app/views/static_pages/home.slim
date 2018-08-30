@@ -2,13 +2,24 @@
 
 = render 'header'
 
-.container
-  .jumbotron.text-center
-    h1.text-center Welcome to the Sample App 
-    p.lead.text-center 
-      | This is home page for the 
-      = link_to "Ruby on Rails Tutorial ", '#' 
-      | sample application.
-    = link_to "Sign up now!", signup_path, class: "btn btn-primary btn-lg", id: "btn-center" 
+-if signed_in?
+  aside.row
+    .col-4
+      section
+        =render 'shared/user_info'
+      section
+        =render 'shared/micropost_form'
+    .col-8
+      h3 Micropost Feed
+      = render 'shared/feed'    
+-else
+  .container
+    .jumbotron.text-center
+      h1.text-center Welcome to the Sample App 
+      p.lead.text-center 
+        | This is home page for the 
+        = link_to "Ruby on Rails Tutorial ", '#' 
+        | sample application.
+      = link_to "Sign up now!", signup_path, class: "btn btn-primary btn-lg", id: "btn-center" 
 
 = render 'footer'

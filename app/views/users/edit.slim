@@ -4,8 +4,9 @@
 .container
   .jumbotron
     h1.text-center Update your Profile
-    = form_with model: @user do |f|
-        = render 'shared/error_messages'
+    .form
+      = form_with model: @user, local: true do |f|
+        = render 'shared/error_messages', object: f.object
         .form-group
           =f.label :name, "Имя"
           =f.text_field :name, class: 'form-control'
